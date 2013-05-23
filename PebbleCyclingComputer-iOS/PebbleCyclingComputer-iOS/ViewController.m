@@ -13,13 +13,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    uint8_t bytes[] = {0x5d, 0xd3, 0x58, 0x73, 0x3b, 0xb6, 0x44, 0x46, 0x82, 0x55, 0x0e, 0x61, 0xbc, 0x3b, 0x970, 0xf5};
-    _watchUUID = [NSData dataWithBytes:bytes length:sizeof(bytes)];
-    // We'd like to get called when Pebbles connect and disconnect, so become the delegate of PBPebbleCentral:
-    [[PBPebbleCentral defaultCentral] setDelegate:self];
-
-    // Initialize with the last connected watch:
-    [self setTargetWatch:[[PBPebbleCentral defaultCentral] lastConnectedWatch]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,11 +24,19 @@
 
 - (IBAction)clickButton:(id)sender {
     if(!_gpsRunning) {
+        [self.targetWatch appMessagesLaunch:^(PBWatch *watch, NSError *error) {
+           if(error)
+               NSLog(@"Unable to start watch face");
+        }];
         [self startStandardUpdates];
         [self.startButton setTitle:@"Stop" forState:UIControlStateNormal];
         [self setStatus:@"Started GPS"];
         _gpsRunning = true;
     }else {
+        [self.targetWatch appMessagesKill:^(PBWatch *watch, NSError *error) {
+            if(error)
+                NSLog(@"Unable to stop watch face");
+        }];
         _gpsRunning = false;
         [self stopStandardUpdates];
         [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
@@ -65,31 +67,6 @@
 -(void)stopStandardUpdates
 {
     [locationManager stopUpdatingLocation];
-}
-
-- (void)setTargetWatch:(PBWatch*)watch {
-    _targetWatch = watch;
-
-    // NOTE:
-    // For demonstration purposes, we start communicating with the watch immediately upon connection,
-    // because we are calling -appMessagesGetIsSupported: here, which implicitely opens the communication session.
-    // Real world apps should communicate only if the user is actively using the app, because there
-    // is one communication session that is shared between all 3rd party iOS apps.
-
-    // Test if the Pebble's firmware supports AppMessages / Sports:
-    [watch appMessagesGetIsSupported:^(PBWatch *watch, BOOL isAppMessagesSupported) {
-        if (isAppMessagesSupported) {
-            // Configure our communications channel to target the sports app:
-            [watch appMessagesSetUUID:_watchUUID];
-
-            NSString *message = [NSString stringWithFormat:@"Yay! %@ supports AppMessages :D", [watch name]];
-            [[[UIAlertView alloc] initWithTitle:@"Connected!" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        } else {
-
-            NSString *message = [NSString stringWithFormat:@"Blegh... %@ does NOT support AppMessages :'(", [watch name]];
-            [[[UIAlertView alloc] initWithTitle:@"Connected..." message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        }
-    }];
 }
 
 #pragma mark -
@@ -130,18 +107,4 @@
         }
     }];
 }
-
-#pragma mark -
-#pragma mark - PBPebbleCentral delegate methods
-- (void)pebbleCentral:(PBPebbleCentral*)central watchDidConnect:(PBWatch*)watch isNew:(BOOL)isNew {
-    [self setTargetWatch:watch];
-}
-
-- (void)pebbleCentral:(PBPebbleCentral*)central watchDidDisconnect:(PBWatch*)watch {
-    [[[UIAlertView alloc] initWithTitle:@"Disconnected!" message:[watch name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    if (_targetWatch == watch || [watch isEqual:_targetWatch]) {
-        [self setTargetWatch:nil];
-    }
-}
-
 @end

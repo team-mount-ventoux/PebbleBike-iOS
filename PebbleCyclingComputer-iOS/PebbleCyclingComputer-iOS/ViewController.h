@@ -16,11 +16,10 @@
     CLLocationManager * locationManager;
     bool _gpsRunning;
 
-    PBWatch *_targetWatch;
-    NSData * _watchUUID;
-
     CLLocation* _prevLocation;
 }
+
+@property (nonatomic,strong) PBWatch * targetWatch;
 
 @property (nonatomic, weak) IBOutlet UIButton* startButton;
 @property (nonatomic, weak) IBOutlet UILabel* statusView;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42CD2EFC174ECDDD006EA5DF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CD2EFB174ECDDD006EA5DF /* libz.dylib */; };
+		42CD2EFE174ED088006EA5DF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CD2EFD174ED088006EA5DF /* CoreMotion.framework */; };
 		42E06D61174EAFA400C55F28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D60174EAFA400C55F28 /* UIKit.framework */; };
 		42E06D63174EAFA400C55F28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D62174EAFA400C55F28 /* Foundation.framework */; };
 		42E06D65174EAFA400C55F28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D64174EAFA400C55F28 /* CoreGraphics.framework */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42CD2EFB174ECDDD006EA5DF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		42CD2EFD174ED088006EA5DF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PebbleCyclingComputer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E06D60174EAFA400C55F28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E06D62174EAFA400C55F28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,7 +49,6 @@
 		42E06D79174EAFA400C55F28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		42E06D7C174EAFA400C55F28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		42E06D83174EB0A600C55F28 /* Eddie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eddie.jpg; sourceTree = "<group>"; };
-		42E06D85174EB41900C55F28 /* PebbleCyclingComputer-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PebbleCyclingComputer-iOS.entitlements"; sourceTree = "<group>"; };
 		42E06D86174EB42A00C55F28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		42E06D88174EB84F00C55F28 /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PebbleVendor.framework; path = "PebbleCyclingComputer-iOS/PebbleVendor.framework"; sourceTree = "<group>"; };
 		42E06D8A174EB8C100C55F28 /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
@@ -59,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CD2EFE174ED088006EA5DF /* CoreMotion.framework in Frameworks */,
+				42CD2EFC174ECDDD006EA5DF /* libz.dylib in Frameworks */,
 				42E06D91174EBA3F00C55F28 /* ExternalAccessory.framework in Frameworks */,
 				42E06D8F174EBA3500C55F28 /* MessageUI.framework in Frameworks */,
 				42E06D8D174EBA1700C55F28 /* CoreBluetooth.framework in Frameworks */,
@@ -95,6 +100,8 @@
 		42E06D5F174EAFA400C55F28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42CD2EFB174ECDDD006EA5DF /* libz.dylib */,
+				42CD2EFD174ED088006EA5DF /* CoreMotion.framework */,
 				42E06D90174EBA3F00C55F28 /* ExternalAccessory.framework */,
 				42E06D8E174EBA3500C55F28 /* MessageUI.framework */,
 				42E06D8C174EBA1700C55F28 /* CoreBluetooth.framework */,
@@ -111,7 +118,6 @@
 		42E06D66174EAFA400C55F28 /* PebbleCyclingComputer-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				42E06D85174EB41900C55F28 /* PebbleCyclingComputer-iOS.entitlements */,
 				42E06D6F174EAFA400C55F28 /* AppDelegate.h */,
 				42E06D70174EAFA400C55F28 /* AppDelegate.m */,
 				42E06D78174EAFA400C55F28 /* ViewController.h */,
@@ -243,6 +249,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -258,6 +265,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -274,6 +284,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nic Jackson (2W6YS9285H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -282,6 +293,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "EC995F63-3830-4783-8FCB-94E5EFA83FBC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -290,7 +303,6 @@
 		42E06D81174EAFA400C55F28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS.entitlements";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PebbleCyclingComputer-iOS\"",
@@ -307,7 +319,6 @@
 		42E06D82174EAFA400C55F28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS.entitlements";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PebbleCyclingComputer-iOS\"",
@@ -340,6 +351,7 @@
 				42E06D82174EAFA400C55F28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

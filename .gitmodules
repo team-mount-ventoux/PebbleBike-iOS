@@ -1,0 +1,3 @@
+[submodule "submodules/PebbleCyclingComputer-PebbleWatchFace"]
+	path = submodules/PebbleCyclingComputer-PebbleWatchFace
+	url = https://nicholasjackson@github.com/nicholasjackson/PebbleCyclingComputer-PebbleWatchFace.git

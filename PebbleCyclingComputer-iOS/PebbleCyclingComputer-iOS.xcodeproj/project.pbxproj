@@ -319,6 +319,7 @@
 		42E06D82174EAFA400C55F28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PebbleCyclingComputer-iOS\"",
@@ -328,6 +329,7 @@
 				GCC_PREFIX_HEADER = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

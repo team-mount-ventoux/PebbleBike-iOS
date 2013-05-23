@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42E06D61174EAFA400C55F28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D60174EAFA400C55F28 /* UIKit.framework */; };
+		42E06D63174EAFA400C55F28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D62174EAFA400C55F28 /* Foundation.framework */; };
+		42E06D65174EAFA400C55F28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D64174EAFA400C55F28 /* CoreGraphics.framework */; };
+		42E06D6B174EAFA400C55F28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42E06D69174EAFA400C55F28 /* InfoPlist.strings */; };
+		42E06D6D174EAFA400C55F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E06D6C174EAFA400C55F28 /* main.m */; };
+		42E06D71174EAFA400C55F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E06D70174EAFA400C55F28 /* AppDelegate.m */; };
+		42E06D73174EAFA400C55F28 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E06D72174EAFA400C55F28 /* Default.png */; };
+		42E06D75174EAFA400C55F28 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E06D74174EAFA400C55F28 /* Default@2x.png */; };
+		42E06D77174EAFA400C55F28 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E06D76174EAFA400C55F28 /* Default-568h@2x.png */; };
+		42E06D7A174EAFA400C55F28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E06D79174EAFA400C55F28 /* ViewController.m */; };
+		42E06D7D174EAFA400C55F28 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E06D7B174EAFA400C55F28 /* ViewController.xib */; };
+		42E06D84174EB0A600C55F28 /* Eddie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42E06D83174EB0A600C55F28 /* Eddie.jpg */; };
+		42E06D87174EB42A00C55F28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D86174EB42A00C55F28 /* CoreLocation.framework */; };
+		42E06D89174EB84F00C55F28 /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D88174EB84F00C55F28 /* PebbleVendor.framework */; };
+		42E06D8B174EB8C100C55F28 /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D8A174EB8C100C55F28 /* PebbleKit.framework */; };
+		42E06D8D174EBA1700C55F28 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D8C174EBA1700C55F28 /* CoreBluetooth.framework */; };
+		42E06D8F174EBA3500C55F28 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D8E174EBA3500C55F28 /* MessageUI.framework */; };
+		42E06D91174EBA3F00C55F28 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D90174EBA3F00C55F28 /* ExternalAccessory.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PebbleCyclingComputer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E06D60174EAFA400C55F28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		42E06D62174EAFA400C55F28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42E06D64174EAFA400C55F28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42E06D68174EAFA400C55F28 /* PebbleCyclingComputer-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PebbleCyclingComputer-iOS-Info.plist"; sourceTree = "<group>"; };
+		42E06D6A174EAFA400C55F28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42E06D6C174EAFA400C55F28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42E06D6E174EAFA400C55F28 /* PebbleCyclingComputer-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PebbleCyclingComputer-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		42E06D6F174EAFA400C55F28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		42E06D70174EAFA400C55F28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		42E06D72174EAFA400C55F28 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		42E06D74174EAFA400C55F28 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		42E06D76174EAFA400C55F28 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		42E06D78174EAFA400C55F28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		42E06D79174EAFA400C55F28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		42E06D7C174EAFA400C55F28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		42E06D83174EB0A600C55F28 /* Eddie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eddie.jpg; sourceTree = "<group>"; };
+		42E06D85174EB41900C55F28 /* PebbleCyclingComputer-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PebbleCyclingComputer-iOS.entitlements"; sourceTree = "<group>"; };
+		42E06D86174EB42A00C55F28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		42E06D88174EB84F00C55F28 /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PebbleVendor.framework; path = "PebbleCyclingComputer-iOS/PebbleVendor.framework"; sourceTree = "<group>"; };
+		42E06D8A174EB8C100C55F28 /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
+		42E06D8C174EBA1700C55F28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		42E06D8E174EBA3500C55F28 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		42E06D90174EBA3F00C55F28 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42E06D5A174EAFA400C55F28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E06D91174EBA3F00C55F28 /* ExternalAccessory.framework in Frameworks */,
+				42E06D8F174EBA3500C55F28 /* MessageUI.framework in Frameworks */,
+				42E06D8D174EBA1700C55F28 /* CoreBluetooth.framework in Frameworks */,
+				42E06D87174EB42A00C55F28 /* CoreLocation.framework in Frameworks */,
+				42E06D61174EAFA400C55F28 /* UIKit.framework in Frameworks */,
+				42E06D63174EAFA400C55F28 /* Foundation.framework in Frameworks */,
+				42E06D65174EAFA400C55F28 /* CoreGraphics.framework in Frameworks */,
+				42E06D89174EB84F00C55F28 /* PebbleVendor.framework in Frameworks */,
+				42E06D8B174EB8C100C55F28 /* PebbleKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42E06D54174EAFA400C55F28 = {
+			isa = PBXGroup;
+			children = (
+				42E06D83174EB0A600C55F28 /* Eddie.jpg */,
+				42E06D66174EAFA400C55F28 /* PebbleCyclingComputer-iOS */,
+				42E06D5F174EAFA400C55F28 /* Frameworks */,
+				42E06D5E174EAFA400C55F28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42E06D5E174EAFA400C55F28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42E06D5F174EAFA400C55F28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42E06D90174EBA3F00C55F28 /* ExternalAccessory.framework */,
+				42E06D8E174EBA3500C55F28 /* MessageUI.framework */,
+				42E06D8C174EBA1700C55F28 /* CoreBluetooth.framework */,
+				42E06D86174EB42A00C55F28 /* CoreLocation.framework */,
+				42E06D8A174EB8C100C55F28 /* PebbleKit.framework */,
+				42E06D88174EB84F00C55F28 /* PebbleVendor.framework */,
+				42E06D60174EAFA400C55F28 /* UIKit.framework */,
+				42E06D62174EAFA400C55F28 /* Foundation.framework */,
+				42E06D64174EAFA400C55F28 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42E06D66174EAFA400C55F28 /* PebbleCyclingComputer-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				42E06D85174EB41900C55F28 /* PebbleCyclingComputer-iOS.entitlements */,
+				42E06D6F174EAFA400C55F28 /* AppDelegate.h */,
+				42E06D70174EAFA400C55F28 /* AppDelegate.m */,
+				42E06D78174EAFA400C55F28 /* ViewController.h */,
+				42E06D79174EAFA400C55F28 /* ViewController.m */,
+				42E06D7B174EAFA400C55F28 /* ViewController.xib */,
+				42E06D67174EAFA400C55F28 /* Supporting Files */,
+			);
+			path = "PebbleCyclingComputer-iOS";
+			sourceTree = "<group>";
+		};
+		42E06D67174EAFA400C55F28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42E06D68174EAFA400C55F28 /* PebbleCyclingComputer-iOS-Info.plist */,
+				42E06D69174EAFA400C55F28 /* InfoPlist.strings */,
+				42E06D6C174EAFA400C55F28 /* main.m */,
+				42E06D6E174EAFA400C55F28 /* PebbleCyclingComputer-iOS-Prefix.pch */,
+				42E06D72174EAFA400C55F28 /* Default.png */,
+				42E06D74174EAFA400C55F28 /* Default@2x.png */,
+				42E06D76174EAFA400C55F28 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42E06D5C174EAFA400C55F28 /* PebbleCyclingComputer-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E06D80174EAFA400C55F28 /* Build configuration list for PBXNativeTarget "PebbleCyclingComputer-iOS" */;
+			buildPhases = (
+				42E06D59174EAFA400C55F28 /* Sources */,
+				42E06D5A174EAFA400C55F28 /* Frameworks */,
+				42E06D5B174EAFA400C55F28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PebbleCyclingComputer-iOS";
+			productName = "PebbleCyclingComputer-iOS";
+			productReference = 42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42E06D55174EAFA400C55F28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nic Jackson";
+			};
+			buildConfigurationList = 42E06D58174EAFA400C55F28 /* Build configuration list for PBXProject "PebbleCyclingComputer-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42E06D54174EAFA400C55F28;
+			productRefGroup = 42E06D5E174EAFA400C55F28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42E06D5C174EAFA400C55F28 /* PebbleCyclingComputer-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42E06D5B174EAFA400C55F28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E06D6B174EAFA400C55F28 /* InfoPlist.strings in Resources */,
+				42E06D73174EAFA400C55F28 /* Default.png in Resources */,
+				42E06D75174EAFA400C55F28 /* Default@2x.png in Resources */,
+				42E06D77174EAFA400C55F28 /* Default-568h@2x.png in Resources */,
+				42E06D7D174EAFA400C55F28 /* ViewController.xib in Resources */,
+				42E06D84174EB0A600C55F28 /* Eddie.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42E06D59174EAFA400C55F28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E06D6D174EAFA400C55F28 /* main.m in Sources */,
+				42E06D71174EAFA400C55F28 /* AppDelegate.m in Sources */,
+				42E06D7A174EAFA400C55F28 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42E06D69174EAFA400C55F28 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E06D6A174EAFA400C55F28 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42E06D7B174EAFA400C55F28 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E06D7C174EAFA400C55F28 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42E06D7E174EAFA400C55F28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		42E06D7F174EAFA400C55F28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42E06D81174EAFA400C55F28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS.entitlements";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PebbleCyclingComputer-iOS\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Prefix.pch";
+				INFOPLIST_FILE = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42E06D82174EAFA400C55F28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS.entitlements";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PebbleCyclingComputer-iOS\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Prefix.pch";
+				INFOPLIST_FILE = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42E06D58174EAFA400C55F28 /* Build configuration list for PBXProject "PebbleCyclingComputer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E06D7E174EAFA400C55F28 /* Debug */,
+				42E06D7F174EAFA400C55F28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E06D80174EAFA400C55F28 /* Build configuration list for PBXNativeTarget "PebbleCyclingComputer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E06D81174EAFA400C55F28 /* Debug */,
+				42E06D82174EAFA400C55F28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42E06D55174EAFA400C55F28 /* Project object */;
+}

@@ -116,7 +116,11 @@
     NSNumber * DISTANCE_TEXT = @(1);
     NSNumber * AVGSPEED_TEXT = @(2);
 
-    NSDictionary *updateDict = @{SPEED_TEXT: [NSString stringWithFormat:@"%d",speed]};
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setPositiveFormat:@"0.#"];
+
+    // set the speed with 1dp accuracy
+    NSDictionary *updateDict = @{SPEED_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:speed]]};
 
     [_targetWatch sportsAppUpdate:updateDict onSent:^(PBWatch *watch, NSError *error) {
         if (error) {

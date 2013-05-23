@@ -12,7 +12,3 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
-
-int SPEED_TEXT = 0;
-int DISTANCE_TEXT = 1;
-int AVGSPEED_TEXT = 2;

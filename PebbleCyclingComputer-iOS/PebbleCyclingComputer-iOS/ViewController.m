@@ -13,7 +13,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    _watchUUID = [@"5dd35873-3bb6-44d6-8255-0e61bc3b97f5" dataUsingEncoding: [NSString defaultCStringEncoding]];
+    uint8_t bytes[] = {0x5d, 0xd3, 0x58, 0x73, 0x3b, 0xb6, 0x44, 0x46, 0x82, 0x55, 0x0e, 0x61, 0xbc, 0x3b, 0x970, 0xf5};
+    _watchUUID = [NSData dataWithBytes:bytes length:sizeof(bytes)];
     // We'd like to get called when Pebbles connect and disconnect, so become the delegate of PBPebbleCentral:
     [[PBPebbleCentral defaultCentral] setDelegate:self];
 
@@ -111,6 +112,19 @@
 
 - (void)sendSpeedToPebble:(double)speed {
 
+    NSNumber * SPEED_TEXT = @(0);
+    NSNumber * DISTANCE_TEXT = @(1);
+    NSNumber * AVGSPEED_TEXT = @(2);
+
+    NSDictionary *updateDict = @{SPEED_TEXT: [NSString stringWithFormat:@"%d",speed]};
+
+    [_targetWatch sportsAppUpdate:updateDict onSent:^(PBWatch *watch, NSError *error) {
+        if (error) {
+            NSLog(@"Failed sending update: %@\n", error);
+        } else {
+            NSLog(@"Updated Pebble");
+        }
+    }];
 }
 
 #pragma mark -

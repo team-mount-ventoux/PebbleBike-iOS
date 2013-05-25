@@ -16,3 +16,14 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+/PebbleCyclingComputer-iOS/Products/Debug-iphoneos/Pebble Cycling.app.dSYM/
+/PebbleCyclingComputer-iOS/Products/Debug-iphoneos/Pebble Cycling.app/
+/PebbleCyclingComputer-iOS/Products/Debug-iphonesimulator/Pebble Cycling.app.dSYM/
+/PebbleCyclingComputer-iOS/Products/Debug-iphonesimulator/Pebble Cycling.app/
+Debug-iphoneios
+Debug-iphoneos
+/PebbleCyclingComputer-iOS/Products/Debug-iphoneos/PebbleCyclingComputer-iOS.app.dSYM/Contents/Resources/DWARF/PebbleCyclingComputer-iOS
+/PebbleCyclingComputer-iOS/Products/Debug-iphoneos/PebbleCyclingComputer-iOS.app/_CodeSignature/CodeResources
+/PebbleCyclingComputer-iOS/Products/Debug-iphoneos/PebbleCyclingComputer-iOS.app/Info.plist
+/PebbleCyclingComputer-iOS/Products/Debug-iphoneos/PebbleCyclingComputer-iOS.app/PebbleCyclingComputer-iOS

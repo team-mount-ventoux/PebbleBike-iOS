@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42C46A141750E0FF00D0B3E0 /* Logo@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C46A131750E0FF00D0B3E0 /* Logo@2.png */; };
+		42C46A161750E10300D0B3E0 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C46A151750E10300D0B3E0 /* Logo.png */; };
 		42CD2EFC174ECDDD006EA5DF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CD2EFB174ECDDD006EA5DF /* libz.dylib */; };
 		42CD2EFE174ED088006EA5DF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CD2EFD174ED088006EA5DF /* CoreMotion.framework */; };
 		42E06D61174EAFA400C55F28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D60174EAFA400C55F28 /* UIKit.framework */; };
@@ -30,9 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42C46A131750E0FF00D0B3E0 /* Logo@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2.png"; sourceTree = "<group>"; };
+		42C46A151750E10300D0B3E0 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		42CD2EFB174ECDDD006EA5DF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		42CD2EFD174ED088006EA5DF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PebbleCyclingComputer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E06D5D174EAFA400C55F28 /* Pebble Cycling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pebble Cycling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E06D60174EAFA400C55F28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E06D62174EAFA400C55F28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42E06D64174EAFA400C55F28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +86,8 @@
 		42E06D54174EAFA400C55F28 = {
 			isa = PBXGroup;
 			children = (
+				42C46A151750E10300D0B3E0 /* Logo.png */,
+				42C46A131750E0FF00D0B3E0 /* Logo@2.png */,
 				42E06D83174EB0A600C55F28 /* Eddie.jpg */,
 				42E06D66174EAFA400C55F28 /* PebbleCyclingComputer-iOS */,
 				42E06D5F174EAFA400C55F28 /* Frameworks */,
@@ -92,7 +98,7 @@
 		42E06D5E174EAFA400C55F28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */,
+				42E06D5D174EAFA400C55F28 /* Pebble Cycling.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +165,7 @@
 			);
 			name = "PebbleCyclingComputer-iOS";
 			productName = "PebbleCyclingComputer-iOS";
-			productReference = 42E06D5D174EAFA400C55F28 /* PebbleCyclingComputer-iOS.app */;
+			productReference = 42E06D5D174EAFA400C55F28 /* Pebble Cycling.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,6 +205,8 @@
 				42E06D77174EAFA400C55F28 /* Default-568h@2x.png in Resources */,
 				42E06D7D174EAFA400C55F28 /* ViewController.xib in Resources */,
 				42E06D84174EB0A600C55F28 /* Eddie.jpg in Resources */,
+				42C46A141750E0FF00D0B3E0 /* Logo@2.png in Resources */,
+				42C46A161750E10300D0B3E0 /* Logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +319,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pebble Cycling";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -329,7 +337,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PebbleCyclingComputer-iOS/PebbleCyclingComputer-iOS-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pebble Cycling";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;

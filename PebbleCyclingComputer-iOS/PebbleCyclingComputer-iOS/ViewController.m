@@ -92,14 +92,16 @@
 
 
         int distance = 0;
-        int avgSpeed = 0;
 
-        if(locations.count > 1) {
-            double distance = [location distanceFromLocation:[locations objectAtIndex:0]] * 0.000621371192;
+        if(_prevLocation != nil) {
+            double distance = [location distanceFromLocation:_prevLocation] * 0.000621371192;
             if(distance > 0)
                 distance += _distance;
             else
                 distance = _distance;
+            
+            NSLog(@"Got Prevlocaiton with distance: %f",distance);
+            
         }
 
         if(gpsSpeed > 0) {
@@ -120,6 +122,9 @@
             _distance = distance;
             [self sendSpeedToPebble];
         }
+        
+        _prevLocation = location;
+        
     }
 }
 

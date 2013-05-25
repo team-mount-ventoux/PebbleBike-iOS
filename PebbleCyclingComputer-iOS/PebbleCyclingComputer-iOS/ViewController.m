@@ -26,7 +26,7 @@
     if(!_gpsRunning) {
         [self.targetWatch appMessagesLaunch:^(PBWatch *watch, NSError *error) {
            if(error)
-               NSLog(@"Unable to start watch face");
+               NSLog(@"Unable to start watch face %@",[error localizedDescription]);
         }];
         [self startStandardUpdates];
         [self.startButton setTitle:@"Stop" forState:UIControlStateNormal];
@@ -55,6 +55,11 @@
     if (nil == locationManager)
         locationManager = [[CLLocationManager alloc] init];
 
+    _dataPoints = 0;
+    _totalSpeed = 0.0;
+    _distance = 0.0;
+    _speed = 0;
+    [self sendSpeedToPebble];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 
@@ -67,6 +72,7 @@
 -(void)stopStandardUpdates
 {
     [locationManager stopUpdatingLocation];
+    [_timer invalidate];
 }
 
 #pragma mark -
@@ -83,11 +89,41 @@
                 location.coordinate.latitude,
                 location.coordinate.longitude);
         double gpsSpeed = (location.speed * 2.23693629); // speed in m/s convert to miles per hour use 3.6 for kph
-        [self sendSpeedToPebble:gpsSpeed];
+
+
+        int distance = 0;
+        int avgSpeed = 0;
+
+        if(locations.count > 1) {
+            double distance = [location distanceFromLocation:[locations objectAtIndex:0]] * 0.000621371192;
+            if(distance > 0)
+                distance += _distance;
+            else
+                distance = _distance;
+        }
+
+        if(gpsSpeed > 0) {
+            _totalSpeed += gpsSpeed;
+            _dataPoints ++;
+        }
+
+        if(gpsSpeed < 1)
+            gpsSpeed = 0.0;
+
+        double avgspeed = 0;
+        if(_totalSpeed/_dataPoints > 0)
+            avgspeed = _totalSpeed/_dataPoints;
+
+        if((gpsSpeed != _speed) || (avgspeed != _avgspeed) || (distance != _distance)) {
+            _speed = gpsSpeed;
+            _avgspeed = avgspeed;
+            _distance = distance;
+            [self sendSpeedToPebble];
+        }
     }
 }
 
-- (void)sendSpeedToPebble:(double)speed {
+- (void)sendSpeedToPebble {
 
     NSNumber * SPEED_TEXT = @(0);
     NSNumber * DISTANCE_TEXT = @(1);
@@ -97,7 +133,11 @@
     [fmt setPositiveFormat:@"0.#"];
 
     // set the speed with 1dp accuracy
-    NSDictionary *updateDict = @{SPEED_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:speed]]};
+    NSDictionary *updateDict = @{
+            SPEED_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:_speed]],
+            DISTANCE_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:_distance]],
+            AVGSPEED_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:_avgspeed]]
+    };
 
     [_targetWatch sportsAppUpdate:updateDict onSent:^(PBWatch *watch, NSError *error) {
         if (error) {
@@ -106,5 +146,6 @@
             NSLog(@"Updated Pebble");
         }
     }];
+
 }
 @end

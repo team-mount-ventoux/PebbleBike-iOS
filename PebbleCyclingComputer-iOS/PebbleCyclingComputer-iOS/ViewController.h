@@ -16,7 +16,14 @@
     CLLocationManager * locationManager;
     bool _gpsRunning;
 
+    double _speed;
+    double _totalSpeed;
+    int _dataPoints;
+    double _distance;
+
     CLLocation* _prevLocation;
+    NSTimer * _timer;
+    double _avgspeed;
 }
 
 @property (nonatomic,strong) PBWatch * targetWatch;
@@ -26,5 +33,5 @@
 
 -(IBAction) clickButton:(id) sender;
 
-- (void)sendSpeedToPebble:(double)speed;
+- (void)sendSpeedToPebble;
 @end

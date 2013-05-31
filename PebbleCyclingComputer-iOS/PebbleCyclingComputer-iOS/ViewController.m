@@ -30,7 +30,7 @@
         }];
         [self startStandardUpdates];
         [self.startButton setTitle:@"Stop" forState:UIControlStateNormal];
-        [self setStatus:@"Started GPS"];
+        [self setStatus:@"GPS Started"];
         _gpsRunning = true;
     }else {
         [self.targetWatch appMessagesKill:^(PBWatch *watch, NSError *error) {
@@ -40,12 +40,12 @@
         _gpsRunning = false;
         [self stopStandardUpdates];
         [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
-        [self setStatus:@"Stopped GPS"];
+        [self setStatus:@"GPS Stopped"];
     }
 }
 
 - (void)setStatus:(NSString *) status {
-    [self.statusView setText:[NSString stringWithFormat:@"Status: %@",status]];
+    [self.statusView setText:[NSString stringWithFormat:@"%@",status]];
 }
 
 - (void)startStandardUpdates

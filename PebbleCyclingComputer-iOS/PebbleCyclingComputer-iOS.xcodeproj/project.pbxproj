@@ -29,6 +29,8 @@
 		42E06D8D174EBA1700C55F28 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D8C174EBA1700C55F28 /* CoreBluetooth.framework */; };
 		42E06D8F174EBA3500C55F28 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D8E174EBA3500C55F28 /* MessageUI.framework */; };
 		42E06D91174EBA3F00C55F28 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E06D90174EBA3F00C55F28 /* ExternalAccessory.framework */; };
+		77708FFB17594C940069FD05 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 77708FFA17594C940069FD05 /* start.png */; };
+		77708FFD17594C9B0069FD05 /* start_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 77708FFC17594C9B0069FD05 /* start_active.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		42E06D8C174EBA1700C55F28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		42E06D8E174EBA3500C55F28 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		42E06D90174EBA3F00C55F28 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		77708FFA17594C940069FD05 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		77708FFC17594C9B0069FD05 /* start_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_active.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		42E06D54174EAFA400C55F28 = {
 			isa = PBXGroup;
 			children = (
+				77708FFC17594C9B0069FD05 /* start_active.png */,
+				77708FFA17594C940069FD05 /* start.png */,
 				42C46A151750E10300D0B3E0 /* Logo.png */,
 				42C46A131750E0FF00D0B3E0 /* Logo@2.png */,
 				42E06D83174EB0A600C55F28 /* Eddie.jpg */,
@@ -207,6 +213,8 @@
 				42E06D84174EB0A600C55F28 /* Eddie.jpg in Resources */,
 				42C46A141750E0FF00D0B3E0 /* Logo@2.png in Resources */,
 				42C46A161750E10300D0B3E0 /* Logo.png in Resources */,
+				77708FFB17594C940069FD05 /* start.png in Resources */,
+				77708FFD17594C9B0069FD05 /* start_active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +279,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "";
@@ -299,7 +307,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "EC995F63-3830-4783-8FCB-94E5EFA83FBC";

@@ -35,7 +35,7 @@
     }else {
         [self.targetWatch appMessagesKill:^(PBWatch *watch, NSError *error) {
             if(error)
-                NSLog(@"Unable to stop watch face");
+                NSLog(@"Unable to stop watch face %@", error);
         }];
         _gpsRunning = false;
         [self stopStandardUpdates];
@@ -75,7 +75,6 @@
     [_timer invalidate];
 }
 
-#pragma mark -
 #pragma mark - Delegate method from the CLLocationManagerDelegate protocol
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations {
@@ -130,12 +129,12 @@
 
 - (void)sendSpeedToPebble {
 
-    NSNumber * SPEED_TEXT = @(0);
-    NSNumber * DISTANCE_TEXT = @(1);
-    NSNumber * AVGSPEED_TEXT = @(2);
+	NSNumber * SPEED_TEXT = @(1);
+	NSNumber * DISTANCE_TEXT = @(2);
+	NSNumber * AVGSPEED_TEXT = @(3);
 
     NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
-    [fmt setPositiveFormat:@"0.#"];
+    [fmt setPositiveFormat:@"0.0"];
 
     // set the speed with 1dp accuracy
     NSDictionary *updateDict = @{

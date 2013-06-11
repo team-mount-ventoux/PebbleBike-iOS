@@ -33,14 +33,14 @@
         [self setStatus:@"GPS Started"];
         _gpsRunning = true;
     }else {
-        [self.targetWatch appMessagesKill:^(PBWatch *watch, NSError *error) {
-            if(error)
-                NSLog(@"Unable to stop watch face %@", error);
-        }];
         _gpsRunning = false;
         [self stopStandardUpdates];
         [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
         [self setStatus:@"GPS Stopped"];
+		[self.targetWatch appMessagesKill:^(PBWatch *watch, NSError *error) {
+            if(error)
+                NSLog(@"Unable to stop watch face %@", error);
+        }];
     }
 }
 
@@ -84,23 +84,18 @@
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 15.0) {
         // If the event is recent, do something with it.
-        NSLog(@"latitude %+.6f, longitude %+.6f\n",
-                location.coordinate.latitude,
-                location.coordinate.longitude);
         double gpsSpeed = (location.speed * 2.23693629); // speed in m/s convert to miles per hour use 3.6 for kph
 
 
-        int distance = 0;
+        double distance = 0;
 
         if(_prevLocation != nil) {
-            double distance = [location distanceFromLocation:_prevLocation] * 0.000621371192;
-            if(distance > 0)
-                distance += _distance;
-            else
+            distance = [location distanceFromLocation:_prevLocation] * 0.000621371192;
+            if(distance > 0) {
+                _distance += distance;
+            } else {
                 distance = _distance;
-            
-            NSLog(@"Got Prevlocaiton with distance: %f",distance);
-            
+			}
         }
 
         if(gpsSpeed > 0) {
@@ -115,10 +110,9 @@
         if(_totalSpeed/_dataPoints > 0)
             avgspeed = _totalSpeed/_dataPoints;
 
-        if((gpsSpeed != _speed) || (avgspeed != _avgspeed) || (distance != _distance)) {
+        if((gpsSpeed != _speed) || (avgspeed != _avgspeed) || (abs(distance) != _distance)) {
             _speed = gpsSpeed;
             _avgspeed = avgspeed;
-            _distance = distance;
             [self sendSpeedToPebble];
         }
         
@@ -142,6 +136,8 @@
             DISTANCE_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:_distance]],
             AVGSPEED_TEXT: [fmt stringFromNumber:[NSNumber numberWithDouble:_avgspeed]]
     };
+	
+	self.statusView.text = [NSString stringWithFormat:@"Distance: %f", _distance];
 
     [_targetWatch sportsAppUpdate:updateDict onSent:^(PBWatch *watch, NSError *error) {
         if (error) {
